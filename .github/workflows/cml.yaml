@@ -15,8 +15,8 @@ jobs:
           python train.py
           
           echo "MODEL METRICS" > report.md
+          echo "I added this" > report.md
           
           cat metrics.txt >> report.md
           cml-publish plot.png --md >> report.md
-          cml-publish residuals.png --md >> report.md
           cml-send-comment report.md
